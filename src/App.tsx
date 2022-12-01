@@ -24,8 +24,8 @@ function App() {
   }
   }, [searchTerm])
 
-  const handleSearch = (e: any, term: string) => {
-    console.log(typeof e)
+  const handleSearch = (e: any, term: string) => { // is e for error? errors are typed as any so project runs
+    console.log("type of e is " + typeof e) //console.log produces object.  however, typing as object causes subsequent failure
     e.preventDefault()
     setSearchTerm(term)
   }
